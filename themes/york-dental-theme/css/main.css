@@ -1,0 +1,989 @@
+/* 1920px (desktop)
+
+1440px (laptop)
+
+768px (tablet)
+
+375px (mobile) */
+
+/* Header Styles */
+
+/* Base Styles */
+
+body {
+  overflow-x: hidden !important; /* Hides scrollbar */
+}
+
+.york-dental-header {
+    font-family: 'Arial', sans-serif;
+    background: #3C3C3B;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure header takes full width */
+}
+
+.header-main {
+    padding: 15px 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1920px; /* Max width for the container */
+    margin: 0 auto;
+    padding: 15px 85px; /* Consistent padding on sides */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; /* Space between main header sections */
+}
+
+.header-branding img,
+.header-navigation img {
+    max-height: 80px; /* Max height for logos */
+    width: auto;
+    display: block; /* Remove extra space below image */
+}
+
+.header-navigation img {
+    width: 200px; /* Specific width for the middle logo as per design */
+    height: 120px; /* Specific height for the middle logo as per design */
+    object-fit: contain; /* Ensure the image fits within the dimensions without cropping */
+}
+
+/* Button Styling */
+.book-now-btn {
+    background-color: #E3A68A;
+    color: white;
+    width: 114px;
+    height: 44px;
+    border: none;
+    border-radius: 46px;
+    padding: 10px 10px;
+    font-weight: 500;
+    cursor: pointer;
+    flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+/* Contact Info Styling */
+.header-contact-and-button {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between button and contact info */
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column; /* Stack phone and email vertically */
+    color: white;
+    font-size: 0.9rem; /* Adjust font size as needed */
+    line-height: 1.4; /* Adjust line height for better spacing */
+}
+
+
+.phone-info,
+.email-info {
+    display: flex;
+    align-items: center; /* Align icon and text vertically */
+    gap: 5px; /* Space between SVG and text */
+   
+}
+
+
+.phone-info svg,
+.email-info svg {
+    flex-shrink: 0; /* Prevent SVGs from shrinking */
+}
+
+ 
+.svg_space {
+    margin: 0 5px; /* Adjust spacing around your SVG line */
+}
+
+/* Hide mobile menu toggle on desktop/laptop */
+.mobile-menu-toggle {
+    display: none;
+}
+
+/* Responsive Adjustments */
+
+/* Desktop Specific (1920px) - Fine-tuning for the largest screen */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1920px; /* Ensures it doesn't stretch beyond this */
+        padding: 15px 100px; /* Adjust padding for larger screens if needed */
+    }
+    .header-branding img {
+        max-height: 90px; /* Slightly larger logo for 1920px */
+    }
+    .header-navigation img {
+        width: 220px; /* Slightly larger middle logo */
+        height: 130px;
+    }
+    .book-now-btn {
+        width: 130px;
+        height: 50px;
+        font-size: 1.1rem;
+    }
+    .contact-info {
+        font-size: 1rem;
+    }
+}
+
+/* Laptop Specific (1440px and below, but above typical tablet) */
+@media (max-width: 1440px) {
+    .container {
+        padding: 15px 60px; /* Reduce padding slightly */
+    }
+    .header-branding img {
+        max-height: 70px; /* Smaller logo for laptops */
+    }
+    .header-navigation img {
+        width: 180px; /* Smaller middle logo */
+        height: 110px;
+    }
+    .book-now-btn {
+        width: 100px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+    .contact-info {
+        font-size: 0.85rem;
+    }
+}
+
+/* You might want to add more media queries for smaller screens (tablets, mobile)
+   to hide the contact info, adjust logo sizes, and show the mobile menu toggle.
+   Example for tablet/smaller laptop:
+*/
+@media (max-width: 430px)   {
+  body{
+     overflow-x: hidden !important;
+  }
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+  
+  .header-branding img {
+    max-height: 20px;
+    width: 20px;
+  }
+  
+  .header-navigation img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .book-now-btn {
+    display: none; /* Hiding the button */
+    
+  }
+  
+  .contact-info {
+    display: none; /* Hiding contact info */
+  }
+  
+  .mobile-only {
+    display: none !important;
+  }
+
+
+}
+
+
+
+/* Below header start */
+
+
+/* --- Top Info Bar Section --- */
+.top-info-bar {
+    background-color: #8E837D; /* Matches the background color from image_c54f03.png */
+    padding: 25px 0; /* Adjusted padding to give more vertical space within the bar */
+    color: #fff; /* White text color as seen in the image */
+    text-align: center;
+    margin-top: 0; /* Ensures no space above */
+    margin-bottom: 0; /* Ensures no space below */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow like the header */
+}
+
+.top-info-bar .container {
+    /* This container should inherit or match the max-width/padding of your main header's container */
+    width: 100%;
+    max-width: 1440px; /* Aligns with your specified max-width for content */
+    margin: 0 auto;
+    padding: 0 85px; /* Matches header's side padding for consistency */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.info-blocks-wrapper {
+    display: flex;
+    justify-content: space-between; /* Spreads items out */
+    align-items: center;
+    width: 100%; /* Take full width of container */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 30px; /* Increased space between blocks for 1920px/1440px */
+}
+
+.info-block {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between icon and text */
+    text-align: left;
+    flex: 1; /* Allows blocks to grow and shrink, distributing space */
+    min-width: 250px; /* Minimum width for each block before wrapping */
+    max-width: calc(33.33% - 20px); /* Approx. 3 per row with gap */
+    justify-content: start; /* Center content horizontally within the block on wide screens */
+}
+
+.info-block-icon {
+    width: 50px; /* Larger icon size to match image */
+    height: auto;
+    flex-shrink: 0; /* Prevent icon from shrinking */
+    color: #fff; /* Ensures SVG stroke/fill is white if not explicitly set in SVG */
+}
+
+.info-block-text p {
+    margin: 0; /* Remove default paragraph margins */
+    line-height: 1.3;
+}
+
+.info-block-text .line1 {
+    font-size: 1.25rem; /* Larger font size for the main text */
+    font-weight: bold;
+    white-space: nowrap; /* Prevent line 1 from wrapping too early */
+}
+
+.info-block-text .line2 {
+    font-size: 0.95rem; /* Slightly smaller for the secondary text */
+    opacity: 0.9;
+}
+
+/* --- Responsive Adjustments --- */
+
+/* For 1920px desktop - Primary target */
+@media (min-width: 1920px) {
+    .top-info-bar .container {
+        max-width: 1920px; /* Allow wider for true 1920px desktop */
+        padding: 0 100px; /* Adjust padding for larger screens */
+    }
+    .info-block-icon {
+        width: 55px; /* Slightly larger icons for 1920px */
+    }
+    .info-block-text .line1 {
+        font-size: 1.35rem;
+    }
+    .info-block-text .line2 {
+        font-size: 1rem;
+    }
+}
+
+/* For 1440px laptop - Secondary target */
+@media (max-width: 1440px) {
+    .top-info-bar .container {
+        padding: 0 60px; /* Adjust padding for laptops */
+    }
+    .info-block-icon {
+        width: 45px;
+    }
+    .info-block-text .line1 {
+        font-size: 1.15rem;
+    }
+    .info-block-text .line2 {
+        font-size: 0.9rem;
+    }
+    .info-blocks-wrapper {
+        gap: 20px; /* Slightly less gap */
+    }
+    .info-block {
+        max-width: calc(33.33% - 13.33px); /* Adjust for 3 per row with new gap */
+    }
+}
+
+/* Tablet and smaller laptop adjustments */
+@media (max-width: 992px) {
+    .top-info-bar .container {
+        padding: 0 40px;
+    }
+    .info-blocks-wrapper {
+        flex-direction: column; /* Stack blocks vertically */
+        align-items: flex-start; /* Align stacked items to the left */
+        gap: 25px; /* Space between stacked items */
+    }
+    .info-block {
+        max-width: 100%; /* Take full width when stacked */
+        justify-content: flex-start; /* Ensure content starts from the left */
+    }
+    .info-block-icon {
+        width: 40px; /* Smaller icons for tablets */
+    }
+    .info-block-text .line1 {
+        font-size: 1.1rem;
+    }
+    .info-block-text .line2 {
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 431px) {
+    .top-info-bar {
+        display: none;
+    }
+    /* .top-info-bar .container {
+        padding: 0 20px;
+    }
+    .info-block-icon {
+        width: 35px;
+    }
+    .info-block-text .line1 {
+        font-size: 1rem;
+    }
+    .info-block-text .line2 {
+        font-size: 0.8rem;
+    } */
+}
+
+/* end below header*/ 
+
+
+/* Hero section start */
+
+
+
+  /* Hero section start */
+.hero-section {
+    background: #DAD3D1; /* Background color from image */
+    padding: 80px 20px; /* Adjust padding for overall vertical space */
+    position: relative;
+    overflow: hidden; /* Important for background image */
+    z-index: 1;   
+    background-size: contain; /* Or 'cover' depending on desired behavior */
+    background-position: right center; /* Position the image to the right */
+    background-repeat: no-repeat;
+}
+
+.hero-container {
+    width: 100%; 
+    max-width: 1440px; /* Base max-width for content */
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap; /* Allows columns to wrap */
+    justify-content: space-between; /* Space out left and right content */
+    align-items: center;
+    gap: 40px; /* Gap between columns */
+    position: relative; /* For positioning pricing-box relative to this container */
+    min-height: 550px; /* Minimum height for the hero section to contain elements */
+}
+ 
+
+#hero_title_style {
+    width: 100%; /* Take full width of its column */
+    margin-left: 50px; /* Matches your current margin */
+    font-family: 'Timeless', sans-serif; /* Ensure Timeless font is loaded */
+    font-weight: 400;
+    font-size: 3.7rem; /* 62px / 16px = 3.875rem */
+    line-height: 1.06; /* 66px / 62px = 1.06 approx */
+    letter-spacing: -0.5px;
+    color: #3C3C3B; /* Assuming a dark grey for title */
+    max-width: 690px; /* Constrain width for readability */
+}
+
+ 
+#image_desgin {
+    max-width: 100%;  
+    height: auto;  
+    max-height: 460px;  
+    object-fit: contain;  
+    margin-bottom: -50px;  
+    margin-left: 30%; 
+}
+
+
+.box-description{
+ 
+    width: 680px;
+    height: 337px;
+    padding: 40px 0 40px 50px;
+    background-color: #EEE9E4E5;
+    margin: 40px 0 0 50px; /* Removed top margin */
+    position: relative;
+    z-index: 1200;
+ 
+}
+
+
+.btn_book_free {
+    background-color: #B37A5F;
+    color: white;
+    width: 240px;
+    height: 44px;
+    margin-top: 12px;
+    padding: 0 20px;
+    border-radius: 44px;
+    font-family: 'Jost', sans-serif; /* Ensure Jost font is loaded */
+    font-weight: 400;
+    font-size: 0.6875rem; /* 11px / 16px = 0.6875rem */
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    display: inline-flex; /* Use flex to center text vertically if needed */
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+
+.Hero_Rating_Section {
+    width: 670px; /* Take full width of its column */
+    max-width: 990px; /* Constrain width */
+    height: 130px;
+    padding: 40px 0; /* Vertical padding */
+    background-color: #D89D81;
+    margin: 25px 0 0 0; /* Removed fixed right margin, allow auto margin or flex alignment */
+    position: relative;
+    z-index: 1200;
+    text-align: center;
+    display: flex; /* Use flexbox to center content */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #3C3C3B; /* Text color inside rating section */
+    box-sizing: border-box; /* Include padding in width/height calculation */
+}
+
+.Hero_Rating_Section svg {
+    margin-bottom: 10px; /* Space between line/stars and text */
+    fill: #3C3C3B; /* Ensure stars are filled with this color */
+    stroke: #3C3C3B; /* Ensure line is this color */
+}
+
+#hero_rating_section_digit {
+    font-size: 2.1875rem; /* 35px / 16px = 2.1875rem */
+    font-weight: bold; /* Make the number stand out */
+    margin-right: 5px;
+}
+.hero_rating_section_text {
+    margin-top: 0; /* Remove specific top margin, let flexbox handle spacing */
+    margin-left: 250px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 1rem; /* 16px / 16px = 1rem */
+    line-height: 1.5; /* 24px / 16px = 1.5 */
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: baseline; /* Align "Rated 5.0" baseline */
+    justify-content: center; /* Center horizontally */
+}
+
+
+.Hero_Rating_Section svg {
+  margin-left: 400px;
+}
+
+
+#hero_rating_section_digit{
+  margin-left: 5px;
+}
+
+
+/* vertical black box start*/
+.pricing-box {
+    background: #3C3C3B;
+    width: 102px;
+    height: 300px;
+    padding: 30px 15px;
+    border-radius: 110px;
+    position: absolute; /* Positioned relative to hero-container */
+    right: 0; /* Align to the right edge of hero-container */
+    top: 50%; /* Center vertically */
+    transform: translateY(-20%) translateX(-650%); /* Move half its width out to the right */
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Timeless', sans-serif;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+}
+
+.pricing-box svg {
+    margin: 10px 0; /* Space around the line */
+}
+
+.price-from {
+    font-size: 0.875rem; /* 14px */
+    color: white;
+    margin-bottom: 5px;
+}
+
+.price-amount {
+    font-size: 1.5rem; /* 24px */
+    color: white;
+    margin-bottom: 15px;
+}
+
+.price-installment {
+    margin-top: 5px;
+    font-size: 0.875rem; /* 14px */
+    color: white;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.price-installment span:nth-child(2) {
+    font-size: 1.125rem; /* 18px */
+    color: white;
+    margin: 5px 0;
+}
+
+.subtitle { /* The subtitle you have at the very bottom */
+    width: 100%;
+    text-align: center;
+    margin-top: 40px; /* Space below the content */
+    font-size: 1rem;
+    color: #555;
+}
+
+
+/* --- Responsive Adjustments --- */
+
+/* Desktop - 1920px specific adjustments */
+@media (min-width: 1920px) {
+    .hero-container {
+        max-width: 1920px; /* Expand container for very wide screens */
+        padding: 0 100px; /* Add internal padding */
+        min-height: 600px; /* Increase height for larger screens */
+    }
+    #hero_title_style {
+        font-size: 4.5rem; /* Larger title */
+        line-height: 1.1;
+        max-width: 800px; /* Allow wider title */
+        margin-left: 0; /* Remove left margin on very wide screens if container is wide */
+    }
+    .box-description {
+        width: 850px ;
+       /* Larger description box */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    #image_desgin {
+        max-width: 100%;  
+        height: auto;  
+        max-height: 560px;  
+        object-fit: contain;  
+        margin-bottom: -145px;  
+        margin-left: 40%; 
+      /* display: none;  Hide if background image is used for hero section */
+    }
+
+    .Hero_Rating_Section svg {
+      margin-left: 600px;
+    }
+    .hero_rating_section_text{
+        margin-left: 450px;
+    }
+
+    #hero_rating_section_digit{
+      margin-left: 5px;
+    }
+
+    .Hero_Rating_Section {
+        max-width: 950px; /* Match description box width */
+        margin: 70px 0 0 0; 
+    }
+    .pricing-box {
+        transform: translateY(-25%) translateX(-760%); /* Position more inside for 1920px */
+        right: 100px; /* Adjust based on padding */
+    }
+
+
+}
+
+/* Laptop - 1440px specific adjustments (this is your base, so adjust slightly) */
+@media (max-width: 1440px) {
+    .hero-container {
+        max-width: 1200px; /* Slightly smaller container */
+        padding: 0 50px;
+    }
+    #hero_title_style {
+        font-size: 3rem; /* Slightly smaller title */
+        line-height: 1.15;
+        max-width: 650px;
+        margin-left: 0; /* Remove margin as it breaks fluid layout */
+    }
+    .box-description {
+        max-width: 560px; /* Slightly smaller description box */
+        padding: 30px 0 30px 40px;
+        margin-left: 0; /* Remove margin */
+    }
+    .box-description h5 {
+        
+        font-size: 1.1rem;
+    }
+    .box-description span {
+        font-size: 0.95rem;
+    }
+    .Hero_Rating_Section {
+        width: 610px;
+        margin: 1.5px 0 0 0; /* Remove margin */
+    }
+
+    #hero_rating_section_digit{
+      margin-left: 5px;
+    }
+
+    .Hero_Rating_Section svg {
+      margin-left: 400px;
+    }
+    .hero_rating_section_text{
+        margin-left: 250px;
+    }
+    .pricing-box {
+        right: -50px; /* Keep it outside slightly */
+        transform: translateY(-40%) translateX(-570%); /* Keep it outside slightly */
+    }
+}
+
+
+/* Tablet responsiveness */
+@media (max-width: 992px) {
+    .hero-section {
+        background-size: cover; /* Cover background on smaller screens */
+        background-position: center center;
+        padding-bottom: 120px; /* Add more padding at bottom to reveal girl more if needed */
+    }
+    .hero-container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center items horizontally */
+        min-height: auto; /* Allow height to adjust */
+        padding: 0 20px;
+        gap: 20px;
+    }
+    .col-lg-6, .col-md-6 {
+        flex: 0 0 100%; /* Take full width */
+        max-width: 100%;
+    }
+    #hero_title_style {
+        font-size: 2.8rem;
+        line-height: 1.2;
+        text-align: center;
+        margin: 0 auto 20px auto; /* Center title */
+        max-width: 90%;
+    }
+    .box-description {
+        width: 90%;
+        max-width: 500px; /* Constrain max width for readability */
+        margin: 20px auto; /* Center it */
+        padding: 25px 20px 25px 30px;
+    }
+    .Hero_Rating_Section {
+        width: 90%;
+        max-width: 500px;
+        margin: 20px auto;
+    }
+    .pricing-box {
+        position: relative; /* Change to relative or static for better flow on smaller screens */
+        top: auto;
+        right: auto;
+        transform: none; /* Remove transformations */
+        margin: 20px auto; /* Center the pricing box when stacked */
+        width: 90px; /* Keep it compact */
+        height: 250px;
+        padding: 20px 10px;
+        border-radius: 90px;
+    }
+    .price-from, .price-amount, .price-installment span {
+        font-size: 0.8rem;
+    }
+    .price-amount {
+        font-size: 1.2rem;
+    }
+    .price-installment span:nth-child(2) {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 431px) {
+    .hero-section {
+        padding: 40px 10px;
+    }
+    #hero_title_style {
+        font-size: 1rem;
+        
+        text-align: start;
+    }
+    /* .box-description {
+        width: 70%;
+        justify-content: start;
+        font-size: 0.5rem;
+    } */
+    /* .Hero_Rating_Section {
+        width: 100%;
+        padding: 20px;
+        height: auto; /* Allow height to adjust 
+    } */
+    /* .hero_rating_section_text {
+        font-size: 0.9rem;
+    }
+    #hero_rating_section_digit {
+        font-size: 1.8rem;
+    } */
+    .pricing-box {
+        width: 80px;
+        height: 220px;
+        padding: 15px 5px;
+        border-radius: 80px;
+    }
+    /* .btn_book_free {
+        width: 100%; /* Full width button 
+        font-size: 0.8rem;
+    } */
+}
+
+
+
+/* Hero Section End */
+
+/* --- Our Invisalign Package Section Styles --- */
+.invisalign-package-section {
+    
+    background-color: #f8f8f8; /* A very light grey background, matches image */
+    padding: 100px 20px; /* Adjust padding as needed for spacing */
+    text-align: center; /* Center align the text */
+}
+
+.invisalign-package-section .container {
+  display: block;
+    max-width: 800px; /* Max width for the content to keep the paragraph readable */
+    margin: 0 auto; /* Center the container */
+}
+
+.invisalign-package-heading {
+    font-family: 'Playfair Display', serif; /* Or a similar elegant serif font */
+    font-size: 38px; /* Adjust font size */
+    color: #4a4a4a; /* Dark grey color */
+    margin-bottom: 25px; /* Space below heading */
+    line-height: 1.2;
+}
+
+.invisalign-package-description {
+    font-family: 'Open Sans', sans-serif; /* Or a common sans-serif font like Arial, Helvetica */
+    font-size: 16px; /* Adjust font size */
+    color: #6a6a6a; /* Lighter grey for paragraph text */
+    line-height: 1.6; /* Good line height for readability */
+    max-width: 700px; /* Limit paragraph width */
+    margin: 0 auto; /* Center the paragraph if its width is limited */
+}
+ 
+
+/* footer section start */
+
+footer {
+    background-color: #333; /* Or the exact color from your Figma */
+    padding: 40px 0; /* Adjust padding as needed */
+    color: #fff; /* Text color */
+    font-family: Arial, sans-serif; /* Use your desired font */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Adjust max-width to your site's content width */
+    margin: 0 0 0 80px;
+    padding: 0 20px; /* Inner padding */
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Space between logo and invisalign */
+}
+
+.site-logo img {
+    max-height: 80px; /* Adjust logo size */
+    width: auto;
+}
+
+.invisalign-logo img,
+.doctify-award img {
+    max-height: 100px; /* Adjust award/partner logo sizes */
+    width: auto;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: end;
+    gap: 15px; /* Space between social icons */
+}
+
+.twitter_svg {
+    
+    margin: 0 0 0 100px;
+}
+
+
+.footer-bottom-text {
+    text-align: start;
+    padding-top: 30px;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-left: 7%;
+}
+
+.footer-bottom-text a {
+    color: #f0f0f0; /* Link color */
+    text-decoration: underline;
+}
+
+/* Desktop - 1920px specific adjustments */
+@media (min-width: 1920px) {
+    
+  footer {
+      background-color: #333; /* Or the exact color from your Figma */
+      padding: 40px 0; /* Adjust padding as needed */
+      color: #fff; /* Text color */
+      font-family: Arial, sans-serif; /* Use your desired font */
+  }
+
+  .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px; /* Adjust max-width to your site's content width */
+      margin: 0 0 0 80px;
+      padding: 0 20px; /* Inner padding */
+  }
+
+  .footer-left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px; /* Space between logo and invisalign */
+  }
+
+  .site-logo img {
+      max-height: 80px; /* Adjust logo size */
+      width: auto;
+  }
+
+  .invisalign-logo img,
+  .doctify-award img {
+      max-height: 100px; /* Adjust award/partner logo sizes */
+      width: auto;
+  }
+
+  .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px; /* Space between social icons */
+  }
+
+  .footer-bottom-text {
+      text-align: start;
+      margin-left: 17%;
+      padding-top: 30px;
+      font-size: 14px;
+      margin-top: 20px;
+  }
+
+  .footer-bottom-text a {
+      color: #f0f0f0; /* Link color */
+      text-decoration: underline;
+  } 
+
+
+}
+
+/* Desktop - 1920px specific adjustments */
+@media (min-width: 1440px) {
+    
+  footer {
+      background-color: #333; /* Or the exact color from your Figma */
+      padding: 40px 0; /* Adjust padding as needed */
+      color: #fff; /* Text color */
+      font-family: Arial, sans-serif; /* Use your desired font */
+  }
+
+  .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px; /* Adjust max-width to your site's content width */
+      margin: 0 0 0 80px;
+      padding: 0 20px; /* Inner padding */
+  }
+
+  .footer-left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px; /* Space between logo and invisalign */
+  }
+
+  .site-logo img {
+      max-height: 80px; /* Adjust logo size */
+      width: auto;
+  }
+
+  .invisalign-logo img,
+  .doctify-award img {
+      max-height: 100px; /* Adjust award/partner logo sizes */
+      width: auto;
+  }
+
+  .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px; /* Space between social icons */
+  }
+
+  .footer-bottom-text {
+      text-align: start;
+      margin-left: 12%;
+      padding-top: 30px;
+      font-size: 14px;
+      margin-top: 20px;
+  }
+
+  .footer-bottom-text a {
+      color: #f0f0f0; /* Link color */
+      text-decoration: underline;
+  } 
+
+
+}
+
+/* footer section end */
+
+
+
+
+/*  */
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+
+
+
+
+/* Responsive Styles */
+/* @media (max-width: 992px) {
+   
+} */
